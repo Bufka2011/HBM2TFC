@@ -1,11 +1,5 @@
-package com.myname.mymodid;
+package com.st3v3n.hbm2tfc;
 
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,20 +10,20 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-//import com.myname.mymodid.ArmorCheck;
+//import com.st3v3n.hbm2tfc.ArmorCheck;
 
 import com.hbm.tileentity.machine.TileEntityMachinePumpBase;
 import com.dunk.tfc.api.TFCBlocks;
 
 
-@Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "MyMod", acceptedMinecraftVersions = "[1.7.10]", dependencies = "required-after:terrafirmacraftplus;required-after:hbm;")
-public class MyMod {
+@Mod(modid = hbm2tfc.MODID, version = Tags.VERSION, name = "HBM2TFC", acceptedMinecraftVersions = "[1.7.10]", dependencies = "required-after:terrafirmacraftplus;required-after:hbm;")
+public class hbm2tfc {
 
-    public static final String MODID = "mymodid";
+    public static final String MODID = "hbm2tfc";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
 
-    @SidedProxy(clientSide = "com.myname.mymodid.ClientProxy", serverSide = "com.myname.mymodid.CommonProxy")
+    @SidedProxy(clientSide = "com.st3v3n.hbm2tfc.ClientProxy", serverSide = "com.st3v3n.hbm2tfc.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

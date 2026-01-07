@@ -1,77 +1,20 @@
-package com.myname.mymodid.mixins.late;
+package com.st3v3n.hbm2tfc.mixins.late;
 
-import com.dunk.tfc.Core.Player.BodyTempStats;
 import com.dunk.tfc.Core.TFC_Core;
-import com.dunk.tfc.Handlers.EntityArmorHandler;
 
-import com.dunk.tfc.WorldGen.WorldCacheManager;
 import cpw.mods.fml.common.FMLLog;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import org.apache.logging.log4j.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 
-import java.util.*;
-
-import com.dunk.tfc.Reference;
-import com.dunk.tfc.TerraFirmaCraft;
-import com.dunk.tfc.Core.TFC_Achievements;
 import com.dunk.tfc.Core.TFC_Climate;
-import com.dunk.tfc.Core.TFC_Core;
-import com.dunk.tfc.Core.TFC_Sounds;
-import com.dunk.tfc.Core.TFC_Time;
-import com.dunk.tfc.Core.Player.BodyTempStats;
-import com.dunk.tfc.Core.Player.FoodStatsTFC;
-import com.dunk.tfc.Core.Player.InventoryPlayerTFC;
-import com.dunk.tfc.Core.Player.PlayerInfo;
-import com.dunk.tfc.Core.Player.PlayerManagerTFC;
-import com.dunk.tfc.Core.Player.SkillStats;
-import com.dunk.tfc.Entities.EntityProjectileTFC;
-import com.dunk.tfc.Entities.Mobs.EntityHorseTFC;
-import com.dunk.tfc.Food.ItemFoodTFC;
-import com.dunk.tfc.Food.ItemMeal;
-import com.dunk.tfc.Handlers.Network.AbstractPacket;
-import com.dunk.tfc.Handlers.Network.ExtraItemsPacket;
-import com.dunk.tfc.Handlers.Network.PlayerUpdatePacket;
-import com.dunk.tfc.Items.ItemArrow;
-import com.dunk.tfc.Items.ItemBloom;
-import com.dunk.tfc.Items.ItemBoots;
 import com.dunk.tfc.Items.ItemClothing;
-import com.dunk.tfc.Items.ItemOreSmall;
-import com.dunk.tfc.Items.ItemQuiver;
-import com.dunk.tfc.Items.ItemSocks;
-import com.dunk.tfc.Items.ItemTFCArmor;
-import com.dunk.tfc.Items.ItemBlocks.ItemAnvil;
-import com.dunk.tfc.Items.ItemBlocks.ItemBarrels;
-import com.dunk.tfc.Items.Tools.ItemCustomBow;
-import com.dunk.tfc.Items.Tools.ItemJavelin;
-import com.dunk.tfc.Items.Tools.ItemSling;
-import com.dunk.tfc.api.Armor;
-import com.dunk.tfc.api.Food;
-import com.dunk.tfc.api.TFCAttributes;
-import com.dunk.tfc.api.TFCBlocks;
 import com.dunk.tfc.api.TFCItems;
-import com.dunk.tfc.api.TFCOptions;
-import com.dunk.tfc.api.Constant.Global;
-import com.dunk.tfc.api.Entities.IAnimal;
-import com.dunk.tfc.api.Enums.EnumArmorBodyPart;
-import com.dunk.tfc.api.Interfaces.IArmor;
-import com.dunk.tfc.api.Interfaces.IAttackSpeed;
-import com.dunk.tfc.api.Interfaces.IBoots;
 import com.dunk.tfc.api.Interfaces.IEquipable;
 import com.dunk.tfc.api.Interfaces.IEquipable.ClothingType;
-import com.dunk.tfc.api.Interfaces.IEquipable.EquipType;
-import com.dunk.tfc.api.Interfaces.IFood;
-import com.dunk.tfc.api.Util.Helper;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -98,7 +41,6 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
-import net.minecraft.world.World;
 import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
@@ -106,11 +48,6 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.fluids.FluidStack;
 import com.hbm.items.armor.ArmorFSB;
-
-
-import com.dunk.tfc.Core.TFC_Core;
-
-import static com.dunk.tfc.Core.TFC_Core.setBodyTempStats;
 
 @Mixin(value= TFC_Core.class, remap=false)
 public class ArmorCheckMixin {

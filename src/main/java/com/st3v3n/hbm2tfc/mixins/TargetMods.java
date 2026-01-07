@@ -1,4 +1,4 @@
-package com.myname.mymodid.mixins;
+package com.st3v3n.hbm2tfc.mixins;
 
 import com.gtnewhorizon.gtnhmixins.builders.ITargetMod;
 import com.gtnewhorizon.gtnhmixins.builders.TargetModBuilder;

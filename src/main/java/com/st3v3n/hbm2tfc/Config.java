@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.st3v3n.hbm2tfc;
 
 import java.io.File;
 

@@ -1,21 +1,13 @@
-package com.myname.mymodid.mixins.late;
+package com.st3v3n.hbm2tfc.mixins.late;
 
 import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 //import com.dunk.tfc.WorldGen.WorldCacheManager;
 
-import com.dunk.tfc.WorldGen.GenLayers.Biome.GenLayerBiomeEdge;
-
-import com.dunk.tfc.WorldGen.DataLayer;
-import com.dunk.tfc.WorldGen.GenLayers.GenLayerTFC;
-import com.dunk.tfc.WorldGen.Data.DataCache;
 import net.minecraft.world.World;
 import com.dunk.tfc.WorldGen.WorldCacheManager;
 import java.util.Map;

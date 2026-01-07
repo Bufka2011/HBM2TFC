@@ -1,10 +1,12 @@
-package com.myname.mymodid.mixins.late;
-
+package com.st3v3n.hbm2tfc.mixins.late;
 
 import com.dunk.tfc.Core.TFC_MobData;
-import org.spongepowered.asm.mixin.*;
-import org.spongepowered.asm.mixin.injection.*;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Final;
 
 @Mixin(value= TFC_MobData.class, remap=false)
 public class MobHealth {

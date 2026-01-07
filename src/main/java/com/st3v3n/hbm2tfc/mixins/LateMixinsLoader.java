@@ -1,4 +1,4 @@
-package com.myname.mymodid.mixins;
+package com.st3v3n.hbm2tfc.mixins;
 
 import com.gtnewhorizon.gtnhmixins.ILateMixinLoader;
 import com.gtnewhorizon.gtnhmixins.LateMixin;
@@ -16,10 +16,10 @@ public class LateMixinsLoader implements ILateMixinLoader {
 
     @Override
     public String getMixinConfig() {
-        // rename the associated .json file by replacing the "mymodid" with your own mod ID
+        // rename the associated .json file by replacing the "hbm2tfc" with your own mod ID
         // in the .json file edit the "package" and "refmap" properties to match your mod
-        // also edit the "refmap" property in the "mixins.mymodid.json" file
-        return "mixins.mymodid.late.json";
+        // also edit the "refmap" property in the "mixins.hbm2tfc.json" file
+        return "mixins.hbm2tfc.late.json";
     }
 
     @Nonnull
