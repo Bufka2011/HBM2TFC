@@ -1,4 +1,4 @@
-package com.st3v3n.hbm2tfc.mixins;
+package com.st3v3n.tfb.mixins;
 
 import com.gtnewhorizon.gtnhmixins.builders.IMixins;
 import com.gtnewhorizon.gtnhmixins.builders.MixinBuilder;

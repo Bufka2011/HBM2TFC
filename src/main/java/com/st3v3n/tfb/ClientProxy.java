@@ -1,4 +1,4 @@
-package com.st3v3n.hbm2tfc;
+package com.st3v3n.tfb;
 
 public class ClientProxy extends CommonProxy {
 

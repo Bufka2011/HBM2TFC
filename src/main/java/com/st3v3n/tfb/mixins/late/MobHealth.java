@@ -1,4 +1,4 @@
-package com.st3v3n.hbm2tfc.mixins.late;
+package com.st3v3n.tfb.mixins.late;
 
 import com.dunk.tfc.Core.TFC_MobData;
 import org.spongepowered.asm.mixin.Mixin;
