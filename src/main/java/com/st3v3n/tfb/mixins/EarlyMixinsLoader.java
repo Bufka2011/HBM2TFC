@@ -1,4 +1,4 @@
-package com.st3v3n.hbm2tfc.mixins;
+package com.st3v3n.tfb.mixins;
 
 import com.gtnewhorizon.gtnhmixins.IEarlyMixinLoader;
 import com.gtnewhorizon.gtnhmixins.builders.IMixins;
@@ -36,10 +36,10 @@ public class EarlyMixinsLoader implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public String getMixinConfig() {
-        // rename the associated .json file by replacing the "hbm2tfc" with your own mod ID
+        // rename the associated .json file by replacing the "tfb" with your own mod ID
         // in the .json file edit the "package" and "refmap" properties to match your mod
-        // also edit the "refmap" property in the "mixins.hbm2tfc.json" file
-        return "mixins.hbm2tfc.early.json";
+        // also edit the "refmap" property in the "mixins.tfb.json" file
+        return "mixins.tfb.early.json";
     }
 
     @Override

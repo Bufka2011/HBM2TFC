@@ -1,4 +1,4 @@
-package com.st3v3n.hbm2tfc;
+package com.st3v3n.tfb;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -10,20 +10,20 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-//import com.st3v3n.hbm2tfc.ArmorCheck;
+//import com.st3v3n.tfb.ArmorCheck;
 
 import com.hbm.tileentity.machine.TileEntityMachinePumpBase;
 import com.dunk.tfc.api.TFCBlocks;
 
 
-@Mod(modid = hbm2tfc.MODID, version = Tags.VERSION, name = "HBM2TFC", acceptedMinecraftVersions = "[1.7.10]", dependencies = "required-after:terrafirmacraftplus;required-after:hbm;")
-public class hbm2tfc {
+@Mod(modid = tfb.MODID, version = Tags.VERSION, name = "tfb", acceptedMinecraftVersions = "[1.7.10]", dependencies = "required-after:terrafirmacraftplus;required-after:hbm;")
+public class tfb {
 
-    public static final String MODID = "hbm2tfc";
+    public static final String MODID = "tfb";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
 
-    @SidedProxy(clientSide = "com.st3v3n.hbm2tfc.ClientProxy", serverSide = "com.st3v3n.hbm2tfc.CommonProxy")
+    @SidedProxy(clientSide = "com.st3v3n.tfb.ClientProxy", serverSide = "com.st3v3n.tfb.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler

@@ -1,7 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8.5-GTNH",
-  "refmap": "mixins.hbm2tfc.refmap.json",
+  "package": "com.st3v3n.tfb.mixins.late",
+  "refmap": "mixins.st3v3n.refmap.json",
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8"
 }

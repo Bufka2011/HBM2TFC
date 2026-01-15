@@ -1,4 +1,4 @@
-package com.st3v3n.hbm2tfc;
+package com.st3v3n.tfb;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -12,8 +12,8 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
         Config.synchronizeConfiguration(event.getSuggestedConfigurationFile());
 
-        hbm2tfc.LOG.info(Config.greeting);
-        hbm2tfc.LOG.info("I am hbm2tfc at version " + Tags.VERSION);
+        tfb.LOG.info(Config.greeting);
+        tfb.LOG.info("I am TerraFirmaBob at version " + Tags.VERSION);
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
